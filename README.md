@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Professional Headshot generator
 
-## Getting Started
+### Features
+* Stripe Payments
+* Auto photo crop , resize on client
+* Photo criteria checker on client (ai)
+* Controlnet positioning
+* Image upscaler
+* Dreambooth SD trainer
+* Custom ai image generation api (python)
 
-First, run the development server:
+### Stack
+* Typescript
+* Python (for ai part)
+* Automatic1111 API (self host)
+* Nextjs (app router)
+* MongoDB
+* NextAuth
+* Amazon S3 (to strore traning files,uploaded & generated images etc.)
+* Runpod (for ai computing)
+## Preview
+####Main page
+![](https://i.hizliresim.com/thovdak.png)
+####Dashboard
+![](https://i.hizliresim.com/bcowvv9.png)
+####Transaction History Page
+![](https://i.hizliresim.com/n5ayh4e.png)
+####Results Page
+![](https://i.hizliresim.com/cexe9rm.png)
+#### Micro Transaction on results page 
+![](https://i.hizliresim.com/gmnio3y.png)
+### Photo Upload Page
+![](https://i.hizliresim.com/805735k.png)
+### Payment Page (Stripe)
+![](https://i.hizliresim.com/anw2xuy.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
+https://www.headshotrapid.com/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cronjobs
+You have to change the `_vercel.json` file to `vercel.json` or need to create a cronjob for trigger `/api/update` endpoint for every 5 minutes.This is a must to do.This action will check current generation results and update them accordingly.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Runpod configurations 
+[https://runpod.io/](https://runpod.io?ref=toecyicf "https://runpod.io/")
 
-## Learn More
+Docker Image for AI generation: https://hub.docker.com/r/autorun12/runpod-worker-a1111-2/tags
+If you dont want to use my docker image you can build your own from my repo : https://github.com/emintatli/runpod-sdapi
 
-To learn more about Next.js, take a look at the following resources:
+You have to run this docker file on runpod serverless and get the id and modify the RUNPOD_SERVERLESS_ID on env file
+You can find more info about the deployment from here : https://docs.runpod.io/docs
+and also they have discord channel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+###Workflow
+![](https://i.hizliresim.com/7a934cb.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### ENV file
 
-## Deploy on Vercel
+NEXTAUTH_SECRET= random long key
+GOOGLE_CLIENT_ID= https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+GOOGLE_CLIENT_SECRET=https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+MONGODB_URI= your db 
+NEXTAUTH_URL= https://example.com/api/auth
+WEB_URL= your website url https://example.com
+STRIPE_PLAN_PREMIUM= stripe product key (ex : price_1sf4t34etfiLt5WO)
+STRIPE_UNLOCK_20_PLAN=stripe product key (ex : price_1sf4t34etfiLt5WO)
+STRIPE_API_KEY= https://stripe.com/docs/keys
+STRIPE_WEBHOOK_SECRET=https://stripe.com/docs/webhooks
+AWS_ACCESS_KEY_ID=https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+AWS_SECRET_ACCESS_KEY=https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+AWS_REGION= your bucket region ex: us-east-1
+AWS_ZIP_BUCKET_NAME= your bucket name
+AWS_CKPT_BUCKET_NAME=your bucket name
+RUNPOD_API_SECRET=https://docs.runpod.io/
+CF_ACCOUNT_ID= no need
+CF_API_TOKEN=no need
+RUNPOD_SERVERLESS_ID= https://prnt.sc/1azVboQuLr2K
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Changing Prompts
+You can change the prompts if you dont like them or if you want to use this app for another purpose.You can also change controlnet poses.
+file located at :` /lib/prompts.ts`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
