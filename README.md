@@ -19,13 +19,13 @@
 * Amazon S3 (to strore traning files,uploaded & generated images etc.)
 * Runpod (for ai computing)
 ## Preview
-####Main page
+#### Main page
 ![](https://i.hizliresim.com/thovdak.png)
-####Dashboard
+#### Dashboard
 ![](https://i.hizliresim.com/bcowvv9.png)
-####Transaction History Page
+#### Transaction History Page
 ![](https://i.hizliresim.com/n5ayh4e.png)
-####Results Page
+#### Results Page
 ![](https://i.hizliresim.com/cexe9rm.png)
 #### Micro Transaction on results page 
 ![](https://i.hizliresim.com/gmnio3y.png)
