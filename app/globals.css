@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    scroll-behavior: smooth !important;
+}
+
+.gradient-bg {
+    animation: animatedgradient 3s ease infinite alternate;
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
+    background-size: 300% 300%;
+    content: '';
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.tech-slideshow {
+    height: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.mover-1 {
+    height: 500px;
+    z-index: 1;
+    width: 3848px;
+    background: url(https://imagedelivery.net/3PeGHUQkMEy8-eW2JDCv7A/a6299cc1-dc3b-4f5d-b729-6e8b2e1ccf00/hq);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+    animation: moveSlideshow 90s linear infinite;
+}
+.photoBlur {
+    background-image: url(https://imagedelivery.net/3PeGHUQkMEy8-eW2JDCv7A/641abad5-cfe8-48ab-a8f3-885006db3b00/public);
+    background-position: center;
+    background-size: cover;
+}
+
+.white-s {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.1)
+    );
+}
+.hero-bottom-custom {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+}
+
+.palette-white {
+    background-color: #dde6ed;
+}
+
+.palette-light-blue {
+    background-color: #91c8e4;
+}
+.palette-blue {
+    background-color: #526d82;
+}
+.palette-dark-blue {
+    background-color: #27374d;
+}
+.palette-dark-blue-text {
+    color: #27374d;
+}
+
+@media screen and (max-width: 768px) {
+    .white-s {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.4)
+        );
+    }
+}
+
+.title-color {
+    color: #1b145d;
+}
+.primary-color {
+    background: #1b145d;
+}
+
+@keyframes moveSlideshow {
+    100% {
+        transform: translateX(-36.6666%);
+    }
+}
