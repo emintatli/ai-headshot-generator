@@ -22,7 +22,7 @@
 #### Main page
 ![](https://i.hizliresim.com/thovdak.png)
 #### Dashboard
-![](https://i.hizliresim.com/bcowvv9.png)
+![](https://i.hizliresim.com/f5x0lof.png)
 #### Transaction History Page
 ![](https://i.hizliresim.com/n5ayh4e.png)
 #### Results Page
@@ -51,29 +51,47 @@ You have to run this docker file on runpod serverless and get the id and modify 
 You can find more info about the deployment from here : https://docs.runpod.io/docs
 and also they have discord channel.
 
-###Workflow
+### Workflow
 ![](https://i.hizliresim.com/7a934cb.png)
 
 ### ENV file
 
 NEXTAUTH_SECRET= random long key
+
 GOOGLE_CLIENT_ID= https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+
 GOOGLE_CLIENT_SECRET=https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+
 MONGODB_URI= your db 
+
 NEXTAUTH_URL= https://example.com/api/auth
+
 WEB_URL= your website url https://example.com
+
 STRIPE_PLAN_PREMIUM= stripe product key (ex : price_1sf4t34etfiLt5WO)
+
 STRIPE_UNLOCK_20_PLAN=stripe product key (ex : price_1sf4t34etfiLt5WO)
+
 STRIPE_API_KEY= https://stripe.com/docs/keys
+
 STRIPE_WEBHOOK_SECRET=https://stripe.com/docs/webhooks
+
 AWS_ACCESS_KEY_ID=https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+
 AWS_SECRET_ACCESS_KEY=https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+
 AWS_REGION= your bucket region ex: us-east-1
+
 AWS_ZIP_BUCKET_NAME= your bucket name
+
 AWS_CKPT_BUCKET_NAME=your bucket name
+
 RUNPOD_API_SECRET=https://docs.runpod.io/
+
 CF_ACCOUNT_ID= no need
+
 CF_API_TOKEN=no need
+
 RUNPOD_SERVERLESS_ID= https://prnt.sc/1azVboQuLr2K
 
 ### Changing Prompts
