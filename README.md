@@ -21,6 +21,11 @@ https://www.headshotrapid.com/
 * NextAuth
 * Amazon S3 (to strore traning files,uploaded & generated images etc.)
 * Runpod (for ai computing)
+
+### Workflow
+![](https://i.hizliresim.com/7a934cb.png)
+
+
 ## Preview
 #### Main page
 ![](https://i.hizliresim.com/thovdak.png)
@@ -53,8 +58,7 @@ You have to run this docker file on runpod serverless and get the id and modify 
 You can find more info about the deployment from here : https://docs.runpod.io/docs
 and also they have discord channel.
 
-### Workflow
-![](https://i.hizliresim.com/7a934cb.png)
+
 
 ### ENV file
 
