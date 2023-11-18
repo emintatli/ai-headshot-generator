@@ -8,6 +8,9 @@
 * Image upscaler
 * Dreambooth SD trainer
 * Custom ai image generation api (python)
+  
+## Demo
+https://www.headshotrapid.com/
 
 ### Stack
 * Typescript
@@ -35,8 +38,7 @@
 ![](https://i.hizliresim.com/anw2xuy.png)
 
 
-## Demo
-https://www.headshotrapid.com/
+
 
 ## Cronjobs
 You have to change the `_vercel.json` file to `vercel.json` or need to create a cronjob for trigger `/api/update` endpoint for every 5 minutes.This is a must to do.This action will check current generation results and update them accordingly.
