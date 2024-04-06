@@ -9,8 +9,6 @@
 * Dreambooth SD trainer
 * Custom ai image generation api (python)
   
-## Demo
-https://www.headshotrapid.com/
 
 ### Stack
 * Typescript
